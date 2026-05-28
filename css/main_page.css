@@ -1,0 +1,93 @@
+/* HERO CON FONDO Y BLUR */
+
+.hero {
+	position: relative;
+	height: 100vh;
+	background: linear-gradient(135deg, #2eccba, #27ae60);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding: 5rem;
+}
+
+/* Capa oscura */
+.overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(226, 0, 0, 0.55);
+	z-index: 1;
+}
+
+/* Contenido */
+.hero-content {
+	margin: 5rem;
+	padding: 5rem;
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	/* color: rgb(0, 0, 0); */
+	max-width: 80%;
+	background: #ffffff;
+	border-radius: 2rem;
+
+	/* BLUR + ANIMACIÓN */
+	backdrop-filter: blur(0px);
+	opacity: 0.1;
+	transform: translateY(20px);
+	animation: aparecer 1.5s ease forwards;
+}
+
+.hero-content h1 {
+	font-size: 52px;
+	margin-bottom: 20px;
+	color: rgb(0, 0, 0);
+}
+.hero-content h1:hover {
+	font-size: 60px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: rgb(0, 0, 0);
+}
+
+.hero-content p {
+	padding: 2rem;
+	margin: 2rem;
+	border: thin solid #000000;
+	font-size: 24px;
+	line-height: 1.6;
+	margin-bottom: 30px;
+	color: #000000;
+	background: #ffffff;
+	border-radius: 0.5rem;
+}
+
+/* BOTONES */
+
+.hero-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.primary,
+.secondary {
+	border-radius: 0.25rem;
+	background: linear-gradient(135deg, #2eccba, #27ae60);
+	padding: 0.5rem;
+	text-decoration: none;
+	padding: 1rem;
+	color: #ffffff;
+}
+.primary:hover,
+.secondary:hover {
+	background: #000000;
+	color: rgba(255, 255, 255);
+}
+
+@keyframes aparecer {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+		backdrop-filter: blur(8px);
+	}
+}

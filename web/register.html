@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Registrar usuario</title>
+		<link rel="stylesheet" href="../css/styles.css" />
+	</head>
+	<body>
+		<div class="login-container">
+			<h2>Crear cuenta</h2>
+			<form action="register.php" method="POST">
+				<div class="input-group" id="paso1">
+					<label for="nombre_usuario">Nombre de usuario</label>
+					<input type="text" name="nombre_usuario" required />
+
+					<label for="correo">Correo</label>
+					<input type="email" name="correo" required />
+
+					<label for="contraseña">Contraseña</label>
+					<input type="password" name="contraseña" required />
+
+					<button class="next" type="button" onclick="mostrarPaso2()">
+						Siguiente
+					</button>
+				</div>
+
+				<!-- PASO 2 -->
+
+				<div class="input-group" id="paso2" style="display: none">
+					<label for="nombres">Nombres</label>
+					<input type="text" name="nombres" />
+
+					<label for="apellidos">Apellidos</label>
+					<input type="text" name="apellidos" />
+
+					<label for="telefono">Teléfono</label>
+					<input type="text" name="telefono" />
+
+					<label for="departamento">Departamento</label>
+					<input type="text" name="departamento" />
+
+					<label for="municipio">Municipio</label>
+					<input type="text" name="municipio" />
+
+					<label for="direccion">Dirección</label>
+					<textarea name="direccion"></textarea>
+
+					<p class="link">
+						¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+					</p>
+					<br />
+
+					<button type="submit">Registrarse</button>
+				</div>
+				<script>
+					function mostrarPaso2() {
+						document.getElementById("paso1").style.display = "none";
+						document.getElementById("paso2").style.display = "block";
+					}
+				</script>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Iniciar sesión</title>
+		<link rel="stylesheet" href="../css/styles.css" />
+	</head>
+	<body>
+		<div class="login-container">
+			<h2>Iniciar sesión</h2>
+
+			<form action="validar.php" method="POST">
+				<div class="input-group">
+					<label>Correo</label>
+					<input
+						type="email"
+						name="correo"
+						placeholder="correo@ejemplo.com"
+						required
+					/>
+				</div>
+
+				<div class="input-group">
+					<label>Contraseña</label>
+					<input
+						type="password"
+						name="contrasena"
+						placeholder="••••••••"
+						required
+					/>
+				</div>
+
+				<button type="submit">Ingresar</button>
+			</form>
+		</div>
+	</body>
+</html>
